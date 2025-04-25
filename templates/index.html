@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Siddharth Verma</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+</head>
+<body>
+    <!-- Navbar, home, and other sections go here -->
+
+    <!-- Include the contact section from the contact.html -->
+    {% include 'contact.html' %}
+
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

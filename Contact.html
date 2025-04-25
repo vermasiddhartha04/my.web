@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Siddharth Verma</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+        <div class="container">
+            <a class="navbar-brand logo" href="index_1.html">
+                <h1>Siddharth Verma</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="project.html" class="nav-link">Project</a></li>
+                    <li class="nav-item"><a href="social-media.html" class="nav-link">Social Media</a></li>
+                    <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li> <!-- Updated link -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home-bg section h-100vh" id="home">
+        <video class="bg-vid" autoplay loop muted>
+            <source src="assets/img/pinterestdownloader.com-1720641171.649786.jpg">
+        </video>
+        <div class="bg-overlay"></div>
+        <div class="container z-index">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="text-white text-center">
+                        <h4>Hello & Welcome</h4>
+                        <h1 class="header_title mb-0 mt-3">To my <span class="element fw-bold" data-elements="Profile., Web."></span></h1>
+                        <div class="header_btn">
+                            <a href="social-media.html" class="btn btn-outline-custom btn-rounded mt-4">Social Media</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll_down">
+            <a href="#about" class="scroll">
+                <i class="mbri-arrow-down text-white"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <h2>Contact Me</h2>
+                        <p>If you have any questions or just want to say hello, feel free to reach out!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom btn-rounded">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/typed.js"></script>
+
+    <script>
+        $(".element").each(function() {
+            var $this = $(this);
+            $this.typed({
+                strings: $this.attr('data-elements').split(','),
+                typeSpeed: 100,
+                backDelay: 3000
+            });
+        });
+
+        // Disabled Contact Form Submission (no database or backend involved)
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("This is a demo. Your message has not been sent to any server.");
+        });
+    </script>
+</body>
+</html>
